@@ -10,7 +10,7 @@ utilizar a API de previsão do tempo de 5 dias do https://openweathermap.org/.
 
 **A minha proposta como desenvolvedor foi trazer o ambiente o mais próximo possivel da vida real, utilizando 
 a base Mongo diretamente do servidor Atlas, simulando as configurações que um Devops deveria fazer, como a inserção do
-IP da maquina que esta hospedando os serviços.**
+IP da maquina que esta hospedando os serviços, porém ja deixando configurado para aceiar qualquer ip.**
 
 
 ## Etiquetas
