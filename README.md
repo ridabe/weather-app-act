@@ -47,7 +47,7 @@ Através desta Api, o sistema envia uma requisição para a url proposta no test
 - **Senha:** raizen2024
 
 #### Configuração do IP
-- Após acessar o sistema vá no menu lateral esquerdo na parte de Network Access
+- **Após acessar o sistema vá no menu lateral esquerdo na parte de Network Access**
 <img src="https://thumbs2.imgbox.com/dc/27/9F6EBEQp_t.png" alt="image host"/>
 
 - Selecione o botão ADD IP ADRESS
@@ -65,7 +65,7 @@ Através desta Api, o sistema envia uma requisição para a url proposta no test
   GET /api_url/get_weather/{city}
   ```
 Recupera os dados da previsão do tempo para a cidade selecionada e salva os resultados na base de dados.
-#### Retorno da Api
+#### Exemplo do Retorno da Api
 ```json
 {
     "city": "São Paulo",
@@ -135,8 +135,8 @@ Recupera os dados da previsão do tempo para a cidade selecionada e salva os res
 ```http
   GET /api_url/get_weather_database
   ```
-Recupera os dados do historico de todas as previsões pesquisadas
-#### Retorno da Api
+Recupera os dados do histórico de todas as previsões pesquisadas.
+#### Exemplo do Retorno da Api
 ```json
 {
     "city": "São Paulo",
@@ -244,22 +244,23 @@ Para executar um contêiner com a imagem criada:
 Utilize o postman ou outro app para acessar as rotas da api, acesse o endereço iniciado pelo servidor:
 
 ```bash
-  http://127.0.0.1:8000/get_weather/São Paulo
+  'http://127.0.0.1:8000/get_weather/São Paulo' (as cidade poderão ter espaços caso tenham nomes composto)
 ```
 ```bash
-  http://127.0.0.1:8000/get_weather_database
+  'http://127.0.0.1:8000/get_weather_database'
 ```
 ** Dentro da pasta do projeto tera uma arquivo com as collections para serem usadas no postman ** 
 
 ## Melhorias Sugeridas
 
-Melhorias propostas para a segunda versão:
+Melhorias propostas para uma segunda versão (Code Review):
 
 - Refatorações;
 - Criação de arquivo de rotas;
 - Melhorias de performance trabalhando com concurrent.futures(multithreading);
 - Tratamento de erros(try);
 - Testes Unitários;
+- Endpoint para get por cidades;
 - Ajustes de Typo.
 
 
