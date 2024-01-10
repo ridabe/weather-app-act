@@ -2,11 +2,15 @@
 ![Logo](https://carreiras.raizen.com.br/wp-content/webp-express/webp-images/uploads/2022/03/logo_raizen.png.webp)
 
 
-# Raizen Teste
+# Raízen Teste
 
-O desafio é Elaborar uma aplicação de backend utilizando a linguagem de programação Python que deverá conter 
+O desafio é elaborar uma aplicação de backend utilizando a linguagem de programação Python que deverá conter 
 uma API retornando os dados da previsão do tempo dos próximos dias. Para elaborar essa aplicação, 
 utilizar a API de previsão do tempo de 5 dias do https://openweathermap.org/.
+
+A minha proposta como desenvolvedor foi trazer o ambinete o mais proximo possivel da vida real, utilizando 
+a base Mongo diretamente do servidor mongoDB, simulando as configurações que um Devops deveria fazer, como a inserção do
+IP da maquina que esta hospedando os serviços.
 
 
 ## Etiquetas
@@ -31,8 +35,24 @@ Através desta Api, o sistema envia uma requisição para a url proposta no test
 
 **Bibliotecas:**
 - requests;
-- sqlite3;
+- pymongo;
+- datetime;
 - dotenv.
+
+## Configurando o ip da mauina no MongoAtlas
+- **Endereço de acesso:** https://account.mongodb.com/account/login
+- **email de acesso:** green279@gmail.com
+- **Senha:** raizen2024
+
+#### Configuração do IP
+- Após acessar o sistema vá no menu lateral esquerdo na parte de Network Access
+![img.png](img.png)
+
+- Selecione o botão ADD IP ADRESS
+![img_1.png](img_1.png)
+
+- Insira o ip da máquina que irá rodar o sistema
+![img_2.png](img_2.png)
 
 
 ## Documentação da API
@@ -116,14 +136,69 @@ Recupera os dados da previsão do tempo para a cidade selecionada e salva os res
 Recupera os dados do historico de todas as previsões pesquisadas
 #### Retorno da Api
 ```json
-[
-    [
-        1,
-        "Jundiai",
-        "{'cod': '200', 'message': 0, 'cnt': 40, 'list': [{'dt': 1704844800, 'main': {'temp': 23.46, 'feels_like': 23.98, 'temp_min': 21.74, 'temp_max': 23.46, 'pressure': 1014, 'sea_level': 1014, 'grnd_level': 930, 'humidity': 81, 'temp_kf': 1.72}, 'weather': [{'id': 500, 'main': 'Rain', 'description': 'light rain', 'icon': '10n'}], 'clouds': {'all': 57}, 'wind': {'speed': 2, 'deg': 94, 'gust': 2.76}, 'visibility': 10000, 'pop': 0.68, 'rain': {'3h': 1.66}, 'sys': {'pod': 'n'}, 'dt_txt': '2024-01-10 00:00:00'}, {'dt': 1704855600, 'main': {'temp': 22.36, 'feels_like': 22.87, 'temp_min': 20.17, 'temp_max': 22.36, 'pressure': 1014, 'sea_level': 1014, 'grnd_level': 932, 'humidity': 85, 'temp_kf': 2.19}, 'weather': [{'id': 500, 'main': 'Rain', 'description': 'light rain', 'icon': '10n'}], 'clouds': {'all': 44}, 'wind': {'speed': 0.64, 'deg': 275, 'gust': 1.03}, 'visibility': 10000, 'pop': 0.52, 'rain': {'3h': 0.75}, 'sys': {'pod': 'n'}, 'dt_txt': '2024-01-10 03:00:00'}, {'dt': 1704866400, 'main': {'temp': 20.76, 'feels_like': 21.22, 'temp_min': 19.41, 'temp_max': 20.76, 'pressure': 1014, 'sea_level': 1014, 'grnd_level': 930, 'humidity': 89, 'temp_kf': 1.35}, 'weather': [{'id': 802, 'main': 'Clouds', 'description': 'scattered clouds', 'icon': '03n'}], 'clouds': {'all': 33}, 'wind': {'speed': 1.01, 'deg': 114, 'gust': 1.01}, 'visibility': 10000, 'pop': 0.51, 'sys': {'pod': 'n'}, 'dt_txt': '2024-01-10 06:00:00'}, {'dt': 1704877200, 'main': {'temp': 19.45, 'feels_like': 19.88, 'temp_min': 19.45, 'temp_max': 19.45, 'pressure': 1015, 'sea_level': 1015, 'grnd_level': 931, 'humidity': 93, 'temp_kf': 0}, 'weather': [{'id': 803, 'main': 'Clouds', 'description': 'broken clouds', 'icon': '04d'}], 'clouds': {'all': 69}, 'wind': }}",
-        "2024-01-09 23:03:42"
-    ]
-]
+{
+    "city": "São Paulo",
+    "message": "Previsão do tempo salva com sucesso!",
+    "data": {
+        "cod": "200",
+        "message": 0,
+        "cnt": 40,
+        "list": [
+            {
+                "dt": 1704844800,
+                "main": {
+                    "temp": 23.53,
+                    "feels_like": 23.77,
+                    "temp_min": 23.53,
+                    "temp_max": 26.35,
+                    "pressure": 1015,
+                    "sea_level": 1015,
+                    "grnd_level": 929,
+                    "humidity": 70,
+                    "temp_kf": -2.82
+                },
+                "weather": [
+                    {
+                        "id": 500,
+                        "main": "Rain",
+                        "description": "light rain",
+                        "icon": "10n"
+                    }
+                ],
+                "clouds": {
+                    "all": 75
+                },
+                "wind": {
+                    "speed": 2.88,
+                    "deg": 61,
+                    "gust": 4.94
+                },
+                "visibility": 10000,
+                "pop": 0.42,
+                "rain": {
+                    "3h": 0.22
+                },
+                "sys": {
+                    "pod": "n"
+                },
+                "dt_txt": "2024-01-10 00:00:00"
+            }
+            ],
+                    "city": {
+                        "id": 3448439,
+                        "name": "São Paulo",
+                        "coord": {
+                            "lat": -23.5475,
+                            "lon": -46.6361
+                        },
+                        "country": "BR",
+                        "population": 10021295,
+                        "timezone": -10800,
+                        "sunrise": 1704788901,
+                        "sunset": 1704837486
+                    }
+            }
+}
   ```
 
 
@@ -132,7 +207,7 @@ Recupera os dados do historico de todas as previsões pesquisadas
 Para rodar esse projeto, você vai precisar adicionar as seguintes variáveis de ambiente no seu .env
 
 `API_KEY=c99e7cccfcf2e5e618e757b0a8b8b04f`
-`DATABASE_URL=mongodb://user:password@localhost:27017/weather`
+`DATABASE_URL=mongodb+srv://raizen:raizen1234@cluster0.bzjws0s.mongodb.net/?retryWrites=true&w=majority`
 `API_URL=http://api.openweathermap.org/data/2.5/forecast`
 
 
@@ -172,27 +247,6 @@ Utilize o postman ou outro app para acessar as rotas da api, acesse o endereço 
 ```
 ** Dentro da pasta do projeto tera uma arquivo com as collections para serem usadas no postman ** 
 
-## Rodando localmente
-
-Clone o projeto
-
-```bash
-  git clone https://github.com/ridabe/weather-app-act
-```
-
-Entre no diretório do projeto
-
-```bash
-  cd my-project
-```
-
-Inicie o servidor com o comando
-
-```bash
-  uvicorn main:app --reload
-```
-
-
 ## Melhorias Sugeridas
 
 Melhorias propostas para a segunda versão:
@@ -213,7 +267,7 @@ Para suporte, mande um email para ridabe@uol.com.br ou entre em nosso whatsapp (
 
 Esse projeto é parte do processo seletivo da:
 
-- Raizen
+- Raízen
 
 ![Logo](https://carreiras.raizen.com.br/wp-content/webp-express/webp-images/uploads/2022/03/logo_raizen.png.webp)
 
