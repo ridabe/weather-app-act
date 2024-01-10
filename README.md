@@ -8,9 +8,9 @@ O desafio é elaborar uma aplicação de backend utilizando a linguagem de progr
 uma API retornando os dados da previsão do tempo dos próximos dias. Para elaborar essa aplicação, 
 utilizar a API de previsão do tempo de 5 dias do https://openweathermap.org/.
 
-A minha proposta como desenvolvedor foi trazer o ambinete o mais proximo possivel da vida real, utilizando 
-a base Mongo diretamente do servidor mongoDB, simulando as configurações que um Devops deveria fazer, como a inserção do
-IP da maquina que esta hospedando os serviços.
+**A minha proposta como desenvolvedor foi trazer o ambiente o mais próximo possivel da vida real, utilizando 
+a base Mongo diretamente do servidor Atlas, simulando as configurações que um Devops deveria fazer, como a inserção do
+IP da maquina que esta hospedando os serviços.**
 
 
 ## Etiquetas
