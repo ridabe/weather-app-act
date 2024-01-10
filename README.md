@@ -259,6 +259,7 @@ Melhorias propostas para uma segunda versão (Code Review):
 - Criação de arquivo de rotas;
 - Melhorias de performance trabalhando com concurrent.futures(multithreading);
 - Tratamento de erros(try);
+- Aplicação do Pylint
 - Testes Unitários;
 - Endpoint para get por cidades;
 - Ajustes de Typo.
