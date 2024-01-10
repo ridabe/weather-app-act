@@ -29,10 +29,9 @@ def get_weather_forecast(city):
 
 # Função para criar o banco de dados SQLite e salvar histórico de chamadas
 def save_to_database(city, response_data):
-    conn = sqlite3.connect('weather_history.db')
+    conn = sqlite3.connect('weather_history.db') # # Melhorias proposta nesta parte, inserir estes dados da base no arquivo env
     cursor = conn.cursor()
-
-    # Criar tabela se não existir
+   
     cursor.execute('''
         CREATE TABLE IF NOT EXISTS weather_history (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -53,7 +52,7 @@ def save_to_database(city, response_data):
 
 @app.get("/get_weather_database")
 def get_weather_database():
-    conn = sqlite3.connect('weather_history.db')
+    conn = sqlite3.connect('weather_history.db') # # Melhorias proposta nesta parte, inserir estes dados da base no arquivo env
     cursor = conn.cursor()
     # Recupera todos os dados da tabela
     cursor.execute("SELECT * FROM weather_history")
