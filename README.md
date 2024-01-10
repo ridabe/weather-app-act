@@ -52,7 +52,7 @@ Através desta Api, o sistema envia uma requisição para a url proposta no test
 ![img_1.png](img_1.png)
 
 - Insira o ip da máquina que irá rodar o sistema
-![Logo](https://imgbox.com/gxNDOgcX)
+<a href="https://imgbox.com/gxNDOgcX" target="_blank"><img src="https://thumbs2.imgbox.com/28/e4/gxNDOgcX_t.png" alt="image host"/></a>
 
 
 ## Documentação da API
