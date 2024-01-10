@@ -1,6 +1,7 @@
 import requests
 from dotenv import dotenv_values
 from fastapi import FastAPI
+import sqlite3
 from pymongo import MongoClient
 import pymongo
 from datetime import datetime
@@ -30,9 +31,14 @@ def get_weather_forecast(city):
 
 
 def save_to_mongodb(city, response_data):
-    client = pymongo.MongoClient("mongodb://localhost:27017/")  # Conectando ao MongoDB localmente
-    db = client['weather_history']
+    # client = pymongo.MongoClient("mongodb://localhost:27017/")  # Conectando ao MongoDB localmente
+    client = MongoClient(
+        'mongodb+srv://recrud:recrud2023bne@recrudprd.b82su.mongodb.net/recrud?retryWrites=true&w=majority')
+
+    db = client['recrud']
     collection = db['weather']
+    # db = client['weather_history']
+    # collection = db['weather']
 
     # Inserindo dados
     entry = {
@@ -47,12 +53,17 @@ def save_to_mongodb(city, response_data):
 @app.get("/get_weather_database")
 def get_weather_database():
     client = pymongo.MongoClient("mongodb://localhost:27017/")
+    client = MongoClient(
+        'mongodb+srv://recrud:recrud2023bne@recrudprd.b82su.mongodb.net/recrud?retryWrites=true&w=majority')
 
-    # Selecionando o banco de dados
-    db = client["weather_history"]
+    db = client['recrud']
+    collection = db['weather']
 
-    # Selecionando a coleção
-    collection = db["weather"]
+    # # Selecionando o banco de dados
+    # db = client["weather_history"]
+    #
+    # # Selecionando a coleção
+    # collection = db["weather"]
 
     # Consulta para recuperar todos os documentos da coleção
     result = collection.find({})
