@@ -11,6 +11,7 @@ API_KEY = env_vars.get("API_KEY")
 DB_URL = env_vars.get("DATABASE_URL")
 BASE_URL = env_vars.get("API_URL")
 
+
 @app.get("/get_weather/{city}")
 # Função para buscar previsão do tempo
 def get_weather_forecast(city):
@@ -26,6 +27,7 @@ def get_weather_forecast(city):
     else:
         return {"city": city, "message": 'Erro ao obter previsão do tempo.', "data": None}
 
+
 def save_to_mongodb(city, response_data):
     client = MongoClient(DB_URL)
 
@@ -40,6 +42,7 @@ def save_to_mongodb(city, response_data):
     }
     collection.insert_one(entry)
     client.close()
+
 
 @app.get("/get_weather_database")
 def get_weather_database():
