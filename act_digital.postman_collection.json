@@ -1,0 +1,57 @@
+{
+	"info": {
+		"_postman_id": "c59719ef-d9f1-4c1d-a109-71c5380e4842",
+		"name": "act_digital",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26422984"
+	},
+	"item": [
+		{
+			"name": "get_weather",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/get_weather/São Paulo",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"get_weather",
+						"São Paulo"
+					]
+				},
+				"description": "Traz a previsao do tempo da cidade escolhida para 5 dias e grava o resultado no historico"
+			},
+			"response": []
+		},
+		{
+			"name": "get_weather_database",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/get_weather_database",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"get_weather_database"
+					]
+				},
+				"description": "Recurpera os dados do histórico"
+			},
+			"response": []
+		}
+	]
+}
