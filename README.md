@@ -39,8 +39,8 @@ Através desta Api, o sistema envia uma requisição para a url proposta no test
 - datetime;
 - dotenv.
 
-**Nosso servidor Mongo esta configurado para aceitar qualquer IP**
-**Caso seja preciso inserir o ip da sua maquina no servidor Mongo utilizado siga os passos abaixo**
+**Nosso servidor Mongo esta configurado para aceitar qualquer IP,**
+ **Caso seja preciso inserir o ip da sua maquina no servidor Mongo utilizado siga os passos abaixo**
 #### Configurando o ip da máquina no MongoAtlas
 - **Endereço de acesso:** https://account.mongodb.com/account/login
 - **email de acesso:** green279@gmail.com
