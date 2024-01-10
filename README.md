@@ -209,7 +209,9 @@ Recupera os dados do historico de todas as previsões pesquisadas
 Para rodar esse projeto, você vai precisar adicionar as seguintes variáveis de ambiente no seu .env
 
 `API_KEY=c99e7cccfcf2e5e618e757b0a8b8b04f`
+
 `DATABASE_URL=mongodb+srv://raizen:raizen1234@cluster0.bzjws0s.mongodb.net/?retryWrites=true&w=majority`
+
 `API_URL=http://api.openweathermap.org/data/2.5/forecast`
 
 
