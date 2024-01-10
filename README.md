@@ -46,10 +46,10 @@ Através desta Api, o sistema envia uma requisição para a url proposta no test
 
 #### Configuração do IP
 - Após acessar o sistema vá no menu lateral esquerdo na parte de Network Access
-![img.png](img.png)
+<img src="https://thumbs2.imgbox.com/dc/27/9F6EBEQp_t.png" alt="image host"/>
 
 - Selecione o botão ADD IP ADRESS
-![img_1.png](img_1.png)
+<img src="https://thumbs2.imgbox.com/17/63/YCvp5de8_t.png" alt="image host"/>
 
 - Insira o ip da máquina que irá rodar o sistema
 <img src="https://thumbs2.imgbox.com/28/e4/gxNDOgcX_t.png" alt="image host"/>
