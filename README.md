@@ -256,7 +256,8 @@ Utilize o postman ou outro app para acessar as rotas da api, acesse o endereço 
 Melhorias propostas para a segunda versão:
 
 - Refatorações;
-- Melhorias de performance;
+- Criação de arquivo de rotas;
+- Melhorias de performance trabalhando com concurrent.futures(multithreading);
 - Tratamento de erros(try);
 - Testes Unitários;
 - Ajustes de Typo.
